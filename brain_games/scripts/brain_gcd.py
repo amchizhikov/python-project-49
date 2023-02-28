@@ -2,19 +2,22 @@
 import random
 
 
-def calc():
+def gcd():
     print('Welcome to the Brain Games!')
     name = input('May I have your name? ')
     print(f'Hello, {name}!')
-    print('What is the result of the expression?')
+    print('Find the greatest common divisor of given numbers.')
     i = 0
-    operators = ['+', '-', '*']
     while i < 3:
         random_number_one = random.randint(1, 10)
         random_number_two = random.randint(1, 10)
-        random_operator = random.choice(operators)
-        print(f'Questions: {random_number_one} {random_operator} {random_number_two}')
-        result = eval(f'{random_number_one} {random_operator} {random_number_two}')
+        print(f'Questions: {random_number_one} {random_number_two}')
+        while random_number_one != 0 and random_number_two != 0:
+            if random_number_one > random_number_two:
+                random_number_one = random_number_one % random_number_two
+            else:
+                random_number_two = random_number_two % random_number_one
+        result = random_number_one + random_number_two
         answer = int(input('Your answer: '))
         if answer == result:
             print('Correct!')
@@ -28,7 +31,7 @@ def calc():
 
 
 def main():
-    calc()
+    gcd()
 
 
 if __name__ == '__main__':
