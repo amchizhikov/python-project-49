@@ -10,23 +10,17 @@ def is_even():
     i = 0
     while i < 3:
         random_number = randint(1, 100)
+        if random_number % 2 == 0:
+            result = 'yes'
+        else:
+            result = 'no'
         print(f'Questions: {random_number}')
         answer = input('Your answer: ')
-        if random_number % 2 == 0 and answer == 'yes':
+        if answer == result:
             print('Correct!')
-        elif random_number % 2 != 0 and answer == 'no':
-            print('Correct!')
-        elif random_number % 2 != 0 and answer == 'yes':
-            print(f"""'yes' is wrong answer ;(. Correct answer was 'no'.
-            \rLet's try again, {name}!""")
-            break
-        elif random_number % 2 == 0 and answer == 'no':
-            print(f"""'no' is wrong answer ;(. Correct answer was 'yes'.
-            \rLet's try again, {name}!""")
-            break
         else:
-            print(f"""{answer} is wrong answer ;(. Correct answer
-            \rwas 'yes' or 'no'. Let's try again, {name}!""")
+            print(f"""{answer} is wrong answer ;(. Correct answer was {result}.
+            \rLet's try again, {name}!""")
             break
         i += 1
     if i == 3:
