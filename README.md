@@ -1,5 +1,4 @@
 ### Code status
-[![Actions Status](https://github.com/amchizhikov/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/amchizhikov/python-project-49/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/4eba7ad5bc1a8e7f8686/maintainability)](https://codeclimate.com/github/amchizhikov/python-project-49/maintainability)
 
 
