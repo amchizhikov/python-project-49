@@ -1,18 +1,13 @@
 import random
+from math import gcd
 
 
 TASK = 'Find the greatest common divisor of given numbers.'
 
 
-def gcd():
-    random_number_one = random.randint(1, 10)
-    random_number_two = random.randint(1, 10)
-    while random_number_one != 0 and random_number_two != 0:
-        if random_number_one > random_number_two:
-            random_number_one = random_number_one % random_number_two
-        else:
-            random_number_two = random_number_two % random_number_one
-    result = random_number_one + random_number_two
+def task():
+    random_number_one = random.randint(1, 100)
+    random_number_two = random.randint(1, 100)
     question = f'{random_number_one} {random_number_two}'
-    correct_answer = str(result)
+    correct_answer = str(gcd(random_number_one, random_number_two))
     return question, correct_answer
