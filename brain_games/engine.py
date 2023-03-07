@@ -3,7 +3,7 @@ from brain_games.cli import welcome_user
 
 
 def round_engine(question, correct_answer):
-    print(f'Questions: {question}')
+    print(f'Question: {question}')
     answer = prompt.string('Your answer: ')
     if answer == correct_answer:
         print('Correct!')
