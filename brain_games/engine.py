@@ -5,13 +5,12 @@ from brain_games.cli import welcome_user
 def round_engine(question, correct_answer):
     print(f'Question: {question}')
     answer = prompt.string('Your answer: ')
-    if answer == correct_answer:
+    if answer.upper()== correct_answer.upper():
         print('Correct!')
         return True
-    else:
-        print(f'''{answer} is wrong answer ;(.
-            \rCorrect answer was {correct_answer}.''')
-        return False
+    print(f'''{answer} is wrong answer ;(.
+        \rCorrect answer was {correct_answer}.''')
+    return False
 
 
 def game_engine(game):
