@@ -5,13 +5,15 @@ TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def is_even(question):
+    dict = {True: 'yes', False: 'no'}
     if question % 2 == 0:
-        return 'yes'
+        return dict[True]
     else:
-        return 'no'
+        return dict[False]
 
 
 def task():
-    question = random.randint(1, 100)
+    RANDOM_NUMBER = random.randint(1, 100)
+    question = RANDOM_NUMBER
     correct_answer = str(is_even(question))
     return question, correct_answer

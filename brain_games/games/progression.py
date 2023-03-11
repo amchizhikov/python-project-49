@@ -5,9 +5,13 @@ TASK = 'What number is missing in the progression?'
 
 
 def task():
-    random_number_one = random.randint(1, 5)
-    random_number_two = random.randint(30, 100)
-    random_number_three = random.randint(1, 5)
+    START = random.randint(1, 5)
+    STOP = random.randint(30, 100)
+    STEP = random.randint(1, 5)
+    random_number_one, random_number_two, random_number_three = (
+        START,
+        STOP,
+        STEP)
     progression = list(range(
         random_number_one,
         random_number_two,

@@ -6,8 +6,11 @@ TASK = 'Find the greatest common divisor of given numbers.'
 
 
 def task():
-    random_number_one = random.randint(1, 100)
-    random_number_two = random.randint(1, 100)
+    RANDOM_ONE = random.randint(1, 100)
+    RANDOM_TWO = random.randint(1, 100)
+    random_number_one, random_number_two = (
+        RANDOM_ONE,
+        RANDOM_TWO)
     question = f'{random_number_one} {random_number_two}'
     correct_answer = str(gcd(random_number_one, random_number_two))
     return question, correct_answer
