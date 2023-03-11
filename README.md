@@ -2,7 +2,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/4eba7ad5bc1a8e7f8686/maintainability)](https://codeclimate.com/github/amchizhikov/python-project-49/maintainability)
 
 
----
 ## Install
 ```
 git clone https://github.com/amchizhikov/python-project-49.git
